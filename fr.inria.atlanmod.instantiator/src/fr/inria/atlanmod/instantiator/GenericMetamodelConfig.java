@@ -270,9 +270,12 @@ public class GenericMetamodelConfig implements ISpecimenConfiguration {
 			EObject eObject = (EObject) it.next();
 			if (eObject instanceof EClass) {
 				EClass eClass = (EClass) eObject;
-				if (!eClass.isAbstract() && !eClass.isInterface()) {
+				if(eClass.getName().contains("Root")) {
 					eClasses.add(eClass);
-					}
+				}
+//				if (!eClass.isAbstract() && !eClass.isInterface()) {
+//					eClasses.add(eClass);
+//					}
 			}
 		}
 		

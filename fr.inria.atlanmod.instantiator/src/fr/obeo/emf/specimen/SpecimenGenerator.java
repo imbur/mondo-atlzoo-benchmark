@@ -91,6 +91,7 @@ public class SpecimenGenerator {
 			Optional<EObject> generateEObject = generateEObject(eClass, indexByKind);
 			if (generateEObject.isPresent()) {
 				resource.getContents().add(generateEObject.get());
+				break;
 			}
 			
 		}
